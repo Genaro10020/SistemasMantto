@@ -49,9 +49,12 @@ public class Login extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(Login.this, "" + response, Toast.LENGTH_LONG).show();
-                        if(response.contains("SOY YO") || response.contains("HOLA SOLECITO")){
+
+                        if(response.contains("SI")){
+                            Toast.makeText(Login.this, "B I E N V E N I D @.", Toast.LENGTH_LONG).show();
                             actividadDatosdelEquipo();
+                        }else {
+                            Toast.makeText(Login.this, "VERIFIQUE SUS DATOS", Toast.LENGTH_LONG).show();
                         }
 
                     }
